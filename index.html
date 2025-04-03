@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BODEGA VASQUEZ</title>
+</head>
+<style>
+    *{
+        scroll-behavior: smooth;
+    }
+    body{
+        font-family:Arial, sans-serif;
+        margin: 0  ;
+    }
+    /*Encabezado*/
+    header{
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../BODEGAVASQUEZ/images/imagen1.jpeg) center/cover no-repeat;
+        height: 800px;
+    }
+    .logoup{
+        display: flex;
+        justify-content: space-between;
+        height: 120px;
+        align-items: center;
+        padding: 10px;
+    }
+    .logo img{
+        height: 150px;
+        margin-left: 50px;
+    }
+    .texto{
+        margin-top: 100px;
+        padding: 20px;
+        text-align: center;
+        color: #f5f0ed;
+    }
+    .texto p{
+        padding: 50px;
+    }
+    .logoup a{
+        text-decoration: none;
+        color: #f5f0ed;
+    }
+    nav a{
+        font-weight: 600;
+        padding-right: 10px;
+    }
+    nav a:hover{
+        color: darksalmon;
+    }
+
+    /*Banner*/
+    .banner{
+        background-color: #fad7d0;
+        padding: 30px;
+        display: grid;
+        place-items: center;
+    }
+    .slider{
+        height: 250px;
+        margin: auto;
+        position: relative;
+        width: 90%;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+    }
+    .slide-bann{
+        display: flex;
+        width: calc(250px * 14);
+        animation: desplazar 10s linear infinite;
+    }
+    .slide-bann:hover{
+        animation-play-state: paused;
+    }
+    @keyframes desplazar{
+        0%{
+            transform: translateX(0);
+        }
+        100%{
+            transform: translateX(calc(-250px * 7));
+        }
+    }
+    .slide{
+        height: 200px;
+        width: 250px;
+        display: flex;
+        padding: 15px;
+        perspective: 10px;
+
+    }
+    .slide img{
+        width: 100%;
+
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgb(0, 0, 0, 0.5);
+        transition: transform 1s;
+        
+    }
+    img:hover{
+        transform: translateZ(2px);
+    }
+    .slider::before,
+    .slider::after{
+        background: linear-gradient(to right, rgba(250,215,208,1) 0%, rgba(250,215,208,0) 100%);
+        content: '';
+        height: 100%;
+        position: absolute;
+        width: 15%;
+        z-index: 2;
+    }
+    .slider::before{
+        left: 0;
+        top: 0
+    }
+    .slider::after{
+        right: 0;
+        top: 0;
+        transform: rotateZ(180deg);
+    }
+    
+    /*formulario*/ 
+    .formulario{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 80vh;
+        background: url(../BODEGAVASQUEZ/images/fondo.jpg) center/cover no-repeat;
+        box-sizing: border-box;
+   
+    }
+    .wraper{
+        width: 420px;
+        background: transparent;
+        border: 2px solid rgb(255, 255, 255,0.2);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        color: #fff ;
+        border-radius: 10px;
+        padding: 30px 40px;
+    }
+    .wraper h2{
+        font-size: 36px;
+        font-family: "Poppins", sans-serif;
+        text-align: center;
+    }
+    .wraper .input-group input{
+        width: 86%;
+        height: 10px;
+        background: transparent;
+        margin: 30px 0;
+        border: none;
+        outline: none;
+        border: 2px solid rgba(255,255,255,0.2);
+        border-radius: 40px;
+        font-size: 16px;
+        color: #fff;
+        padding: 20px 45px 20px 20px;
+    }
+
+    .input-group input::placeholder{
+        color: #fff;
+    }
+    .input-group textarea::placeholder{
+        color: #fff;
+    }
+    .wraper .form-text{
+        display: flex;
+        justify-content: space-between;
+        font-size: 15px;
+        margin: -15px 0 15px;
+    }
+    .wraper .btn{
+        width: 100%;
+        height: 45px;
+        background: #fff;
+        border: none;
+        outline: none;
+        border-radius: 40px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        color: #333;
+        font-weight: 600;
+        margin: 20px 0 30px;
+    }
+
+    /* VIDEO Y MAPA */
+    .video-mapa{
+        background: linear-gradient(to right, #d03b40 0%, #d03b40 50%, #fad7d0 50%, #fad7d0 100%);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 70vh;
+    }
+    h2{
+        
+        font-size: 26px;
+        font-family: "Poppins", sans-serif;
+        text-align: center;
+    
+    }
+    .video{
+        
+        text-align: center;
+        margin: 40px;
+    }
+    .video iframe{
+        border: none;
+        border-radius: 40px;
+    }
+    .mapa{
+        
+        text-align: center;
+    
+    }
+    .mapa iframe{
+        border: none;
+        border-radius: 40px;
+    }
+    
+    /*FOOTER*/
+    footer{
+        background-color: #333;
+        color: white;
+        text-align: center;
+        position: absolute;
+        width: 100%;
+    }
+</style>
+
+
+<body>
+    <header>
+        <div class="logoup">
+            <div class="logo">
+                <img src="../BODEGAVASQUEZ/images/logo.png" alt="logo">
+            </div>
+            <nav>
+                <a href="#estamos">EL ESPACIO</a>
+                <a href="#producto">PRODUCTO</a>
+                <a href="#contacta">RESERVA</a>
+                <a href="#contacta">CONTACTO</a>
+                <a href="#encuentranos">UBICANOS</a>
+            </nav>
+        </div>
+        <div class="texto">
+            <h1>COMPRA FACIL, <br> VIVE MEJOR <br> <br><strong>_________</strong></h1>
+            <p>Abarrotes,lácteos, huevos, bebidas, snacks y golosinas.<br> Productos de higiene personal, Artículos del hogar, productos frescos, medicamentos básicos.<br> Revistas, periódicos, recargas móviles, agentes bancarios. </p>
+            
+        </div>
+    </header>
+    <section class="banner" id="producto">
+        <h2>NUESTROS PRODUCTOS</h2>
+        <div class="slider">
+            <div class="slide-bann">
+
+                <!-- las imagenes-->
+                <div class="slide">
+                    <img src="../BODEGAVASQUEZ/images/bann1.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="../BODEGAVASQUEZ/images/bann2.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="../BODEGAVASQUEZ/images/bann3.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="../BODEGAVASQUEZ/images/bann4.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="../BODEGAVASQUEZ/images/bann5.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="../BODEGAVASQUEZ/images/bann6.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="../BODEGAVASQUEZ/images/bann7.jpg" alt="">
+                </div>
+                <!-- las duplicamos-->
+                <div class="slide">
+                    <img src="../BODEGAVASQUEZ/images/bann1.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="../BODEGAVASQUEZ/images/bann2.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="../BODEGAVASQUEZ/images/bann3.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="../BODEGAVASQUEZ/images/bann4.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="../BODEGAVASQUEZ/images/bann5.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="../BODEGAVASQUEZ/images/bann6.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="../BODEGAVASQUEZ/images/bann7.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="formulario" id="contacta">
+        <div class="wraper" >
+            <form action="#">
+                <h2>Contacto</h2>
+                <div class="input-group">              
+                    <input type="text" name="name" id="name" placeholder="Nombre" required>
+                    <input type="tel" name="phone" id="phone" placeholder="Telefono" required>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                    <input type="text" name="message" id="message" placeholder="Mensaje">
+                    <div class="form-text">
+                        <a href="#">Politica de Ptivacidad</a>
+                        <a href="#">Terminos y condiciones</a>
+                    </div>
+                    <button type="submit " class="btn">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="video-mapa" id="encuentranos">
+        <div class="video">
+            <h2>INGRESA A NUESTRAS INSTALACIONES</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/xDRdC4MeM9c?si=Xr_xxjB-Pu7dojGa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="mapa">
+            <h2>ENCUENTRANOS AQUI</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d992.5076454729501!2d-78.79836937555692!3d-5.708720845453979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91b4fb89774ad609%3A0x3c767e0af5d21df0!2sBodega%20California!5e0!3m2!1ses!2spe!4v1743645473123!5m2!1ses!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Pizzería CERTUS | Todos los derechos reservados</p>
+        <p><strong>Contacto: <a href="http://wa.link/lukupn" target="_blank">955123754</a></strong></p>
+    </footer>
+    
+</body>
+</html> 
