@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos del MARKET</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .header{
+            height: 20vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../BODEGAVASQUEZ/images/imagen1.jpeg) center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .logo2 img{
+            margin-right: 500px;
+            height: 150px;
+        margin-left: 50px;
+        }
+        .header h1{
+            text-align: center;
+            color: #f5f0ed;
+        }
+        .container{
+            display: flex;
+            flex: 1;
+        }
+        .sidebar{
+            width: 250px;
+            background: #e96e6e;
+            color: white;
+            padding: 20px;
+        }
+        .sidebar ul{
+            list-style: none;
+        }
+        .sidebar ul li{
+                margin: 15px 0;
+                padding: 10px;
+        }
+        .sidebar ul li a{
+            color: white;
+            text-decoration: none;
+        }
+        .content{
+            flex: 1;
+        }
+        footer{
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo2">
+           <a href="index.html"><img src="../BODEGAVASQUEZ/images/logo.png" alt="logo"></a> 
+        </div>
+        <h1>Nuestros Productos</h1>
+    </div>
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="abarrotes.html" target="content-frame"><strong>Abarrotes</strong></a></li>
+                <li><a href="bebidas.html" target="content-frame"><strong>bebidas</strong></a></li>
+                <li><a href="snacks.html" target="content-frame"><strong>Snacks y golosinas</strong></a></li>
+                <li><a href="aseo.html" target="content-frame"><strong>Aseo personal</strong></a></li>
+                <li><a href="revistas.html" target="content-frame"><strong>Revistas y Periódicos</strong></a></li>
+            </ul>
+        </nav>
+        <main class="content">
+            <iframe src="abarrotes.html" name="content-frame" width="100%" height="100%" style="border:none;"></iframe>
+        </main>
+    </div>
+    
+    <footer>&copy; 2025 | Vasquez Market</footer>
+    
+</body>
+</html>
