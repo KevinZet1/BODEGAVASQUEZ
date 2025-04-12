@@ -1,0 +1,28 @@
+body{
+    background-color: #fad7d0;
+}
+section{
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+.producto-item{
+    background-color: white;
+    padding: 20px;
+    margin: 0 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgb(0, 0, 0, 0.5);
+    width: 250px;
+    text-align: center;
+}
+.producto-item img{
+    width: 100%;
+    border-radius: 8px;
+}
+.producto-item h3{
+    margin: 10px 0;
+}
+.producto-item p{
+    color: #7f8c8d;
+}
