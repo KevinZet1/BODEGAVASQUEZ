@@ -4,65 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body{
-            background-color: #fad7d0;
-        }
-        section{
-            display: flex;
-            justify-content: space-around;
-            margin: 40px 0;
-            flex-wrap: wrap;
-        }
-        .producto-item{
-            background-color: white;
-            padding: 20px;
-            margin: 0 10px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgb(0, 0, 0, 0.5);
-            width: 250px;
-            text-align: center;
-        }
-        .producto-item img{
-            width: 100%;
-            border-radius: 8px;
-        }
-        .producto-item h3{
-            margin: 10px 0;
-        }
-        .producto-item p{
-            color: #7f8c8d;
-        }
-        </style>
+    <link rel="stylesheet" href="estilosinterno.css">
 </head>
 <body>
-    <section class="menu">
-        <div class="producto-item">
-            <img src="../BODEGAVASQUEZ/images/revistas1.jpg" alt="trome">
-            <h3>Trome</h3>
-            <p>¡La combinación perfecta de farándula, deportes, noticias y diversión! Con El Trome, estarás al día con los últimos chismes, consejos útiles y los mejores tips para tu día a día.</p>
-            <p><strong>Precio S/.1.00</strong></p>
-        </div>
-
-        <div class="producto-item">
-            <img src="../BODEGAVASQUEZ/images/revistas2.jpg" alt="depor">
-            <h3>Depor</h3>
-            <p>¡La fuente más confiable y apasionante de deportes en Perú y el mundo! Con DEPOR, estarás al día con las últimas noticias, análisis profundos, entrevistas exclusivas y toda la emoción del fútbol, vóley y más.</p>
-            <p><strong>Precio S/. 1.00</strong></p>
-        </div>
-
-        <div class="producto-item">
-            <img src="../BODEGAVASQUEZ/images/revistas3.jpg" alt="careta">
-            <h3>Caretas</h3>
-            <p>Más que una revista, un referente de periodismo serio y profundo en el Perú. Con CARETAS, accedes a investigaciones exclusivas, cultura, política y análisis que otros no se atreven a publicar.</p>
-            <p><strong>Precio S/. 5.99</strong></p>
-        </div>
-        <div class="producto-item">
-            <img src="../BODEGAVASQUEZ/images/revistas4.jpeg" alt="cosas">
-            <h3>Cosas</h3>
-            <p>La revista líder en estilo de vida, farándula y alta sociedad en el Perú y Latinoamérica. Con COSAS, descubre los eventos exclusivos, las tendencias de moda, las celebridades y los secretos mejor guardados de los famosos.</p>
-            <p><strong>Precio S/. 7.00</strong></p>
-        </div>
+    <input type="checkbox" id="img1">
+    <input type="checkbox" id="img2">
+    <input type="checkbox" id="img3">
+    <input type="checkbox" id="img4">
+ 
+    <section class="galeria">
+        <label class="imagen" for="img1">
+            <img src="../BODEGAVASQUEZ/images/revistas1.jpg" alt="Montaña">
+        </label>
+        <label class="imagen" for="img2">
+            <img src="../BODEGAVASQUEZ/images/revistas2.jpg" alt="Bosque">
+        </label>
+        <label class="imagen" for="img3">
+            <img src="../BODEGAVASQUEZ/images/revistas3.jpg" alt="Playa">
+        </label>
+        <label  class="imagen" for="img4">
+             <img src="../BODEGAVASQUEZ/images/revistas4.jpeg"  alt="">
+        </label>
     </section>
+ 
+     <!--SE PROCEDE A CREAR LOS MODALES-->
+     <!--MODAL 1-->
+     <div class="modal" id="modal1">
+         <div class="modal-content">
+             <label class="cerrar" for="img1">&times;</label>
+             <img src="../BODEGAVASQUEZ/images/revistas1.jpg" alt="Montaña grande">
+             <h3>Trome</h3>
+             <p>¡La combinación perfecta de farándula, deportes, noticias y diversión! Con El Trome, estarás al día con los últimos chismes, consejos útiles y los mejores tips para tu día a día.</p>
+             <p><strong>Precio S/.1.00</strong></p>
+         </div>
+     </div>
+ 
+     <!--MODAL 2-->
+     <div class="modal" id="modal2">
+         <div class="modal-content">
+             <label class="cerrar" for="img2">&times;</label>
+             <img src="../BODEGAVASQUEZ/images/revistas2.jpg" alt="Bosque grande">
+             <h3>Depor</h3>
+             <p>¡La fuente más confiable y apasionante de deportes en Perú y el mundo! Con DEPOR, estarás al día con las últimas noticias, análisis profundos, entrevistas exclusivas y toda la emoción del fútbol, vóley y más.</p>
+             <p><strong>Precio S/. 1.00</strong></p>
+         </div>
+     </div>
+ 
+     <!--MODAL 3-->
+     <div class="modal" id="modal3">
+         <div class="modal-content">
+             <label class="cerrar" for="img3">&times;</label>
+             <img src="../BODEGAVASQUEZ/images/revistas3.jpg" alt="Playa grande">
+             <h3>Caretas</h3>
+             <p>Más que una revista, un referente de periodismo serio y profundo en el Perú. Con CARETAS, accedes a investigaciones exclusivas, cultura, política y análisis que otros no se atreven a publicar.</p>
+             <p><strong>Precio S/. 5.99</strong></p>
+         </div>
+     </div>
+ 
+     <div class="modal" id="modal4">
+         <div class="modal-content">
+             <label class="cerrar" for="img4">&times;</label>
+             <img src="../BODEGAVASQUEZ/images/revistas4.jpeg" alt="Playa grande">
+             <h3>Cosas</h3>
+             <p>La revista líder en estilo de vida, farándula y alta sociedad en el Perú y Latinoamérica. Con COSAS, descubre los eventos exclusivos, las tendencias de moda, las celebridades y los secretos mejor guardados de los famosos.</p>
+             <p><strong>Precio S/. 7.00</strong></p>
+         </div>
+     </div>
 </body>
 </html>

@@ -122,6 +122,25 @@ img:hover{
     box-sizing: border-box;
 
 }
+
+.container-clock{
+    margin: 0;
+    padding: 0;
+    font-size: 60px;
+    color: #38115c;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s color 0.5s;
+    animation: parpadeo 1s infinite;
+}
+@keyframes parpadeo {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+  }
+
 .wraper{
     margin: 40px;
     width: 420px;
@@ -129,7 +148,8 @@ img:hover{
     border: 2px solid rgb(255, 255, 255,0.2);
     backdrop-filter: blur(10px);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    color: #fff ;
+    color: #000000 ;
+    font-size: 20px;
     border-radius: 10px;
     padding: 30px 40px;
 }
@@ -178,6 +198,11 @@ img:hover{
     margin: 20px 0 30px;
 }
 
+.wraper .btn:hover{
+    background-color: rgb(185, 169, 243);
+    color: #d03b40;
+}
+
 /* VIDEO Y MAPA */
 .video-mapa{
     background: linear-gradient(to right, #d03b40 0%, #d03b40 50%, #fad7d0 50%, #fad7d0 100%);
@@ -212,6 +237,72 @@ h2{
     border-radius: 40px;
 }
 
+/*Programadores*/
+.marco-programadores{
+    background-color: #d4cbdb;
+    margin: -22px;
+    text-align: center;
+    align-items: center;
+}
+.marco-programadores h2{
+    padding-top: 40px;
+}
+.programadores{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.profile-card{
+    background: white;
+    padding:  0 15px;
+    margin: 0;
+    border-radius: 15px;
+    box-shadow: 0 8px 20 px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    text-align: center;
+}
+
+.profile-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.profile-img img{
+    width: 100%;
+    height: 350px;
+    border-bottom: 1px solid #eee;
+}
+
+.profile-info{
+    padding: 20px;
+}
+
+.profile-info h2{
+    margin: 10px 0 5px;
+    font-size: 24px;
+}
+
+.profile-info p{
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.social-icon{
+    font-size: 20px;
+    text-decoration: none;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover{
+    color: #0077ff;
+
+}
+
 /*FOOTER*/
 footer{
     background-color: #582b11;
@@ -219,4 +310,7 @@ footer{
     text-align: center;
     position: absolute;
     width: 100%;
+}
+footer a{
+    color: #d4cbdb;
 }
