@@ -669,3 +669,9 @@ footer {
         margin: 12px 0;
     }
 }
+
+/* Estilos para el favicon */
+link[rel="icon"], link[rel="shortcut icon"] {
+    height: 32px !important;
+    width: 32px !important;
+}
