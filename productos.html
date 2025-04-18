@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos del MARKET</title>
     <link rel="stylesheet" href="estilosproductos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="header">
@@ -12,23 +13,85 @@
            <a href="index.html"><img src="../BODEGAVASQUEZ/images/logo.png" alt="logo"></a> 
         </div>
         <h1>Nuestros Productos</h1>
-    </div>
+    </div>    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="index.html">Inicio</a> / 
+        <span>Productos</span>
+    </div>    <!-- Buscador visual (sin funcionalidad) -->
+    <form class="search-wrapper">
+        <div class="search-box">
+            <input type="text" placeholder="¿Qué estás buscando?">
+            <button type="button" aria-label="Buscar" title="Función de búsqueda no disponible">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </form>
+
     <div class="container">
         <nav class="sidebar">
             <ul>
-                <li><a href="abarrotes.html" target="content-frame"><strong>Abarrotes</strong></a></li>
-                <li><a href="bebidas.html" target="content-frame"><strong>bebidas</strong></a></li>
-                <li><a href="snacks.html" target="content-frame"><strong>Snacks y golosinas</strong></a></li>
-                <li><a href="aseo.html" target="content-frame"><strong>Aseo personal</strong></a></li>
-                <li><a href="revistas.html" target="content-frame"><strong>Revistas y Periódicos</strong></a></li>
+                <li>
+                    <a href="abarrotes.html" target="content-frame" class="category-link">
+                        <i class="fas fa-shopping-basket"></i>
+                        <strong>Abarrotes</strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="bebidas.html" target="content-frame" class="category-link">
+                        <i class="fas fa-wine-bottle"></i>
+                        <strong>Bebidas</strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="snacks.html" target="content-frame" class="category-link">
+                        <i class="fas fa-cookie"></i>
+                        <strong>Snacks y golosinas</strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="aseo.html" target="content-frame" class="category-link">
+                        <i class="fas fa-pump-soap"></i>
+                        <strong>Aseo personal</strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="revistas.html" target="content-frame" class="category-link">
+                        <i class="fas fa-newspaper"></i>
+                        <strong>Revistas y Periódicos</strong>
+                    </a>
+                </li>
             </ul>
         </nav>
+        
         <main class="content">
-            <iframe src="abarrotes.html" name="content-frame" width="100%" height="100%" style="border:none;"></iframe>
+            <iframe src="abarrotes.html" name="content-frame" class="content-frame"></iframe>
         </main>
     </div>
-    
-    <footer>&copy; 2025 | Vasquez Market</footer>
-    
+
+    <!-- Footer moderno -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Sobre Nosotros</h3>
+                <p>En Bodega Vásquez nos dedicamos a brindar productos de calidad y un servicio excepcional a nuestra comunidad desde hace más de una década.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contáctanos</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Federico Max 414, Cajamarca/p>
+                <p><i class="fas fa-phone"></i> (01) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> contacto@bodegavasquez.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Síguenos</h3>                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" title="Síguenos en Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com" target="_blank" title="Síguenos en Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/1234567890" target="_blank" title="Contáctanos por WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Bodega Vásquez | Todos los derechos reservados</p>
+        </div>
+    </footer>
 </body>
 </html>

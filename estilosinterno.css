@@ -1,41 +1,55 @@
-*{
+* {
     box-sizing: border-box;
 }
 
-body{
+body {
     margin: 0;
-    font-family: 'Segoe UI',sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     background: #f5caca;
+    min-height: 100vh;
+    padding: 20px;
 }
 
-.galeria{
+/* Ocultar checkboxes */
+input[type="checkbox"] {
+    display: none;
+}
+
+.galeria {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    padding: 40px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.imagen{
+.imagen {
     position: relative;
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.3s;
+    border-radius: 15px;
+    height: 300px; /* Altura fija para todas las imágenes */
 }
 
-.imagen img{
-    width: 300px;
-    height: 350px;
+.imagen img {
+    width: 100%;
+    height: 100%;
     display: block;
+    object-fit: contain; /* Cambiado de 'cover' a 'contain' para mostrar la imagen completa */
     transition: transform 0.3s ease;
     border-radius: 15px;
-    box-shadow: 0 8px 20 px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background-color: white; /* Fondo blanco para imágenes transparentes */
+    padding: 10px; /* Espacio alrededor de la imagen */
 }
 
-.imagen:hover img{
+.imagen:hover img {
     transform: scale(1.1);
 }
 
-.imagen::before{
+.imagen::before {
     content: "Ver más";
     position: absolute;
     bottom: 10px;
@@ -44,64 +58,155 @@ body{
     background: rgba(0, 0, 0, 0.6);
     color: white;
     font-size: 14px;
+    border-radius: 5px;
     opacity: 0;
     transform: translateY(10px);
     transition: all 0.3s ease;
 }
 
-.imagen:hover::before{
+.imagen:hover::before {
     opacity: 1;
     transform: translateY(0);
 }
 
-/*MODAL CSS USANDO CHECKBOX*/
-input[type="checkbox"]{
-        display: none;
-}
-
-.modal{
+/* Estilos para los modales */
+.modal {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Mostrar modal cuando el checkbox está marcado */
+#img1:checked ~ #modal1,
+#img2:checked ~ #modal2,
+#img3:checked ~ #modal3,
+#img4:checked ~ #modal4 {
+    display: flex !important;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+    margin: 20px;
+}
+
+.modal-content img {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px; /* Altura máxima para imágenes en modales */
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.modal-content h3 {
+    color: #333;
+    margin: 15px 0;
+    font-size: 1.5em;
+}
+
+.modal-content p {
+    color: #666;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    background: #e96e6e;
+    color: white;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-    z-index: 1000;
-}
-.modal-content{
-    background: white;
-    padding: 20px;
-    max-width: 600px;
-    width: 90%;
-    border-radius: 8px;
-    text-align: center;
-    position: relative;
-}
-.modal-content img{
-    max-width: 70%;
-    border-radius: 8px;
-}
-
-.cerrar{
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 24px;
     cursor: pointer;
-    color: #ec0606;
+    font-size: 24px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border: 2px solid white;
+    z-index: 1010;
 }
 
-/*Mostrar Modal cuando el checkbox, se encuentre activo*/
-#img1:checked ~ .modal#modal1,
-#img2:checked ~ .modal#modal2,
-#img3:checked ~ .modal#modal3,
-#img4:checked ~ .modal#modal4{
-    opacity: 1;
-    pointer-events: all;
+.cerrar:hover {
+    background: #d03b40;
+    transform: scale(1.1);
+}
+
+/* Ajustes para modales en móviles */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        padding: 20px;
+        margin: 10px;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    .modal-content img {
+        max-height: 250px; /* Imagen más pequeña en móviles */
+        width: auto;
+        margin: 25px auto 15px; /* Más espacio arriba para la X */
+    }
+
+    .cerrar {
+        top: 5px;
+        right: 5px;
+        width: 35px;
+        height: 35px;
+        font-size: 24px;
+        background: #d03b40;
+        border: 2px solid white;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+        z-index: 1100; /* Asegurar que esté por encima de todo */
+    }
+}
+
+/* Ajustes adicionales para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .modal-content {
+        width: 92%;
+        padding: 15px;
+        margin: 8px;
+    }
+
+    .modal-content img {
+        max-height: 200px; /* Aún más pequeña en pantallas muy pequeñas */
+        margin: 30px auto 15px;
+    }
+
+    .modal-content h3 {
+        font-size: 1.3em;
+        margin: 10px 0;
+    }
+
+    .modal-content p {
+        font-size: 0.95em;
+        margin: 8px 0;
+    }
+
+    .cerrar {
+        top: 8px;
+        right: 8px;
+        width: 32px;
+        height: 32px;
+        font-size: 22px;
+    }
 }
