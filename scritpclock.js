@@ -4,7 +4,7 @@ const $seconds = document.getElementById('seconds');
 
 // FECHA DE EVENTO 
 
-const countdownDate = new Date('04 29, 2025 10:38:00').getTime();
+const countdownDate = new Date('05 03, 2025 10:00:00').getTime();
 
 let interval = setInterval(function(){
     // OBTENER FECHA ACTUAL
