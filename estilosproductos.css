@@ -259,6 +259,129 @@ footer {
     font-size: 1.2rem;
 }
 
+/* Estilos para resultados de búsqueda */
+.resultados-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 8px;
+    margin-top: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    max-height: 400px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.resultado-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.resultado-item:hover {
+    background-color: #f8f8f8;
+}
+
+.resultado-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-right: 15px;
+}
+
+.resultado-info {
+    flex: 1;
+}
+
+.resultado-info h4 {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.resultado-info p {
+    margin: 0;
+    font-size: 13px;
+    color: #ff69b4;
+    font-weight: bold;
+}
+
+.no-resultados {
+    padding: 15px;
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}
+
+/* Estilo para el scrollbar de resultados */
+.resultados-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.resultados-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.resultados-container::-webkit-scrollbar-thumb {
+    background: #ff69b4;
+    border-radius: 4px;
+}
+
+.resultados-container::-webkit-scrollbar-thumb:hover {
+    background: #ff4da6;
+}
+
+/* Estilos para resultados a pantalla completa */
+.full-page-results {
+    position: static !important;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: none;
+    background: transparent;
+}
+
+.full-page-results .resultado-item {
+    background: white;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 15px;
+}
+
+.full-page-results .resultado-item img {
+    width: 100px;
+    height: 100px;
+}
+
+.full-page-results .resultado-info h4 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.full-page-results .resultado-info p {
+    font-size: 16px;
+}
+
+/* Estilos para mensaje de no resultados en pantalla completa */
+.full-page-results .no-resultados {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
 /* Estilos responsive para móviles */
 @media (max-width: 768px) {
     .header {

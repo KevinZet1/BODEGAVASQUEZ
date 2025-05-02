@@ -21,20 +21,26 @@
     <div class="breadcrumb">
         <a href="index.html">Inicio</a> / 
         <span>Productos</span>
-    </div>   
-     <!-- Buscador visual (sin funcionalidad) -->
-    <form class="search-wrapper">
+    </div>    <!-- Buscador con funcionalidad -->    
+    <form class="search-wrapper" onsubmit="return false;">
         <div class="search-box">
-            <input type="text" placeholder="¿Qué estás buscando?">
-            <button type="button" aria-label="Buscar" title="Función de búsqueda no disponible">
+            <input type="text" id="searchInput" placeholder="¿Qué estás buscando?" autocomplete="off">
+            <button type="button" class="search-button">
                 <i class="fas fa-search"></i>
             </button>
         </div>
+        <div id="resultados-busqueda" class="resultados-container"></div>
     </form>
 
     <div class="container">
         <nav class="sidebar">
             <ul>
+                <li>
+                    <a href="todos.html" target="content-frame" class="category-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        <strong>Todos los productos</strong>
+                    </a>
+                </li>
                 <li>
                     <a href="abarrotes.html" target="content-frame" class="category-link">
                         <i class="fas fa-shopping-basket"></i>
@@ -98,5 +104,6 @@
             <p>&copy; 2024 Bodega Vásquez | Todos los derechos reservados</p>
         </div>
     </footer>
+    <script src="scriptBusqueda.js"></script>
 </body>
 </html>

@@ -87,7 +87,23 @@ input[type="checkbox"] {
 #img1:checked ~ #modal1,
 #img2:checked ~ #modal2,
 #img3:checked ~ #modal3,
-#img4:checked ~ #modal4 {
+#img4:checked ~ #modal4,
+#img5:checked ~ #modal5,
+#img6:checked ~ #modal6,
+#img7:checked ~ #modal7,
+#img8:checked ~ #modal8,
+#img9:checked ~ #modal9,
+#img10:checked ~ #modal10,
+#img11:checked ~ #modal11,
+#img12:checked ~ #modal12,
+#img13:checked ~ #modal13,
+#img14:checked ~ #modal14,
+#img15:checked ~ #modal15,
+#img16:checked ~ #modal16,
+#img17:checked ~ #modal17,
+#img18:checked ~ #modal18,
+#img19:checked ~ #modal19,
+#img20:checked ~ #modal20 {
     display: flex !important;
 }
 
